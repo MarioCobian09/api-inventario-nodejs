@@ -76,6 +76,7 @@ Sigue estos pasos para configurar y correr el proyecto en tu entorno local.
 
 El proyecto sigue una arquitectura orientada a servicios, separando las responsabilidades en capas:
 
+```text
 src/
 ├── config/         # Conexión a la BD y otras configuraciones.
 ├── controllers/    # Manejan las peticiones y respuestas HTTP.
@@ -86,6 +87,7 @@ src/
 ├── schemas/        # DTOs (Data Transfer Objects) con reglas de validación.
 ├── services/       # Contienen la lógica de negocio principal.
 └── utils/          # Funciones de utilidad (JWT, hashing de contraseñas).
+```
 
 ## 🌐 Endpoints de la API
 
