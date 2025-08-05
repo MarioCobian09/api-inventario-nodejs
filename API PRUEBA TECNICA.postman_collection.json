@@ -1,0 +1,541 @@
+{
+	"info": {
+		"_postman_id": "c47d8a2e-e142-482b-9828-2e5d0218a430",
+		"name": "API PRUEBA TECNICA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41665158"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "USER - Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"correo@correo.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "USER - Get All Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjg2ODg3LCJleHAiOjE3Njk4Mzg4ODd9.vX9CiIg9rUa3zBftDCRjZtIYDujoGlfc-Pyht2yhrGA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/api/user/get-all"
+					},
+					"response": []
+				},
+				{
+					"name": "USER - Get by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjg2ODg3LCJleHAiOjE3Njk4Mzg4ODd9.vX9CiIg9rUa3zBftDCRjZtIYDujoGlfc-Pyht2yhrGA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/api/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "USER - Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Mario Cobian\",\r\n    \"email\": \"correo@correo.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "USER - Update Rol User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Mario Cobian\",\r\n    \"email\": \"correo@correo.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/user/2/role"
+					},
+					"response": []
+				},
+				{
+					"name": "USER -Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Mario Cobian\",\r\n    \"email\": \"correo@correo.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/user/2"
+					},
+					"response": []
+				},
+				{
+					"name": "USER - Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Isael Cobian\",\r\n    \"email\": \"correo2@correo.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/auth/create-user"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "CATEGORY - Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjk2MjE1LCJleHAiOjE3Njk4NDgyMTV9.Ovnu5K1C1ALey52voad6Sqn1QuMkk0wzY_mc7myMxeI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Azucares\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/category"
+					},
+					"response": []
+				},
+				{
+					"name": "CATEGORY - Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjg2ODg3LCJleHAiOjE3Njk4Mzg4ODd9.vX9CiIg9rUa3zBftDCRjZtIYDujoGlfc-Pyht2yhrGA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Alimentos\",\r\n    \"descripcion\": \"Alimentos para productoras\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/category"
+					},
+					"response": []
+				},
+				{
+					"name": "CATEGORY - Get By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjg2ODg3LCJleHAiOjE3Njk4Mzg4ODd9.vX9CiIg9rUa3zBftDCRjZtIYDujoGlfc-Pyht2yhrGA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Alimentos\",\r\n    \"descripcion\": \"Alimentos para productoras\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/category/4"
+					},
+					"response": []
+				},
+				{
+					"name": "CATEGORY - Update Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjg2ODg3LCJleHAiOjE3Njk4Mzg4ODd9.vX9CiIg9rUa3zBftDCRjZtIYDujoGlfc-Pyht2yhrGA"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Metales\",\r\n    \"descripcion\": \"Alimentos para productoras\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/category/2"
+					},
+					"response": []
+				},
+				{
+					"name": "CATEGORY - Update Category Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjg2ODg3LCJleHAiOjE3Njk4Mzg4ODd9.vX9CiIg9rUa3zBftDCRjZtIYDujoGlfc-Pyht2yhrGA"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{URL}}/api/category/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "PRODUCT - Create Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjk2MjE1LCJleHAiOjE3Njk4NDgyMTV9.Ovnu5K1C1ALey52voad6Sqn1QuMkk0wzY_mc7myMxeI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Prueba\",\r\n    \"precio\": 120.20,\r\n    \"categoria\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjk2MjE1LCJleHAiOjE3Njk4NDgyMTV9.Ovnu5K1C1ALey52voad6Sqn1QuMkk0wzY_mc7myMxeI"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - (FILTER) Get by Name or Description",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjk2MjE1LCJleHAiOjE3Njk4NDgyMTV9.Ovnu5K1C1ALey52voad6Sqn1QuMkk0wzY_mc7myMxeI"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/product?search=res",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "6",
+									"description": "Busca por aquellos que tengan en la descripcion un 6",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "res",
+									"description": "Busca por aquellos que tengan en el nombre  o descripcion res"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - (FILTER) Get by Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjk2MjE1LCJleHAiOjE3Njk4NDgyMTV9.Ovnu5K1C1ALey52voad6Sqn1QuMkk0wzY_mc7myMxeI"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/product?category=4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "4",
+									"description": "Obtiene todos los productos con la categoria con ID 4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - Get By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjk2MjE1LCJleHAiOjE3Njk4NDgyMTV9.Ovnu5K1C1ALey52voad6Sqn1QuMkk0wzY_mc7myMxeI"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/api/product/5"
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - Update Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjk2MjE1LCJleHAiOjE3Njk4NDgyMTV9.Ovnu5K1C1ALey52voad6Sqn1QuMkk0wzY_mc7myMxeI"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Pechugas de Pollo\",\r\n    \"descripcion\": \"6 piezas de Pechugas de Pollo\",\r\n    \"precio\": 100.00,\r\n    \"stock\": 50,\r\n    \"categoria\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/product/5"
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - Delete Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjk2MjE1LCJleHAiOjE3Njk4NDgyMTV9.Ovnu5K1C1ALey52voad6Sqn1QuMkk0wzY_mc7myMxeI"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{URL}}/api/product/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventario (Entrada y Salida Stock)",
+			"item": [
+				{
+					"name": "INVENTORY - Add Stock",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjk2MjE1LCJleHAiOjE3Njk4NDgyMTV9.Ovnu5K1C1ALey52voad6Sqn1QuMkk0wzY_mc7myMxeI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cantidad\": 80\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/product/5/add"
+					},
+					"response": []
+				},
+				{
+					"name": "INVENTORY - Remove Stock",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjk2MjE1LCJleHAiOjE3Njk4NDgyMTV9.Ovnu5K1C1ALey52voad6Sqn1QuMkk0wzY_mc7myMxeI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cantidad\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/product/5/remove"
+					},
+					"response": []
+				},
+				{
+					"name": "INVENTORY - Movements By Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJNYXJpbyBDb2JpYW4iLCJlbWFpbCI6ImNvcnJlb0Bjb3JyZW8uY29tIiwiaWF0IjoxNzU0Mjk2MjE1LCJleHAiOjE3Njk4NDgyMTV9.Ovnu5K1C1ALey52voad6Sqn1QuMkk0wzY_mc7myMxeI"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cantidad\": 80\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/product/5/movements"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API - Probando funcionamiento",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{URL}}/api"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
