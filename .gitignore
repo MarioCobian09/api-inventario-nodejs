@@ -1,0 +1,9 @@
+# Archivos de dependencias (se instalan con 'npm install')
+/node_modules
+
+# Archivo de variables de entorno (¡Contiene secretos!)
+.env
+
+# Carpeta de código compilado (se genera con 'npm run build')
+/dist
+/build
